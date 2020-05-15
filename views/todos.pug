@@ -1,0 +1,12 @@
+h1 todo list
+form(action="/todos/search", method="GET")
+  label Tìm kiếm
+  input(type="text",name="q")
+  button Search
+form(action="/todos/create", method="POST")
+  label Nhập thêm
+  input(type="text",name="todo")
+  button Create
+ul
+  each todo in todos
+    li=todo.action
